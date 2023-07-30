@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/generetedPassword.css" />
+    <link rel="stylesheet" href="css/settingPassword.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Password generator app</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="appName">
+        <p>Password generator</p>
+      </div>
+
+      <div id="generetPassword">
+        <div id="passwordPlece">
+          <p class="generetedPassword">Your password</p>
+        </div>
+        <button onclick="copyText()"><b class="copy">Copy</b></button>
+      </div>
+
+      <div id="settingPassword">
+        <div>
+          <p>
+            Character length <span id="valveSlider" class="sliderValue"></span>
+          </p>
+          <input
+            type="range"
+            id="passwordLengthInput"
+            class="passwordLength"
+            name="slider"
+            min="1"
+            max="25"
+            value="1"
+            oninput="updateSliderValue(this.value)"
+          />
+        </div>
+
+        <div>
+          <p>Include Uppercase Letters</p>
+          <input type="checkbox" class="upperCaseBox" />
+        </div>
+        <div>
+          <p>Include Lowercase Letters</p>
+          <input type="checkbox" class="lowerCaseBox" />
+        </div>
+        <div>
+          <p>Include Numbers</p>
+          <input type="checkbox" class="numbersBox" />
+        </div>
+        <div>
+          <p>Include Symbols</p>
+          <input type="checkbox" class="symbolsBox" />
+        </div>
+        <div id="strenghtPassword">
+        <p>STRENGHT</p>
+        </div>
+          <button id="generateInput" onclick="generatePassword()" class="btn">
+            <b>GENERATE</b>
+          </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
